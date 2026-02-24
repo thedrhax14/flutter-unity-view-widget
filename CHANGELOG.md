@@ -1,3 +1,10 @@
+## 6000.1.1 (experimental/unity_6000 branch)
+* [iOS] Updated Unity view attachment path to use `rootViewController?.view` instead of `rootView`.
+    - `ios/Classes/FLTUnityView.swift`: layout updates now target `rootViewController?.view.frame`.
+    - `ios/Classes/FLTUnityWidgetController.swift`: `attachView`, `reattachView`, and `detachView` now operate on `rootViewController?.view`.
+    - `ios/Classes/UnityPlayerUtils.swift`: `createPlayer` completion now returns `rootViewController?.view` in all code paths.
+* [iOS] Keeps Unity view embedding consistent with current Unity iOS app controller view hierarchy.
+
 ## 6000.1.0 (experimental/unity_6000 branch)
 > Includes the same changes as 2022.3.0
 * [Web] Switch to `package:web` to support WebAssembly (WASM).

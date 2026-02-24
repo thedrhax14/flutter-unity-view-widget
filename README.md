@@ -25,7 +25,9 @@ Flutter unity 3D widget for embedding unity in flutter. Now you can make awesome
 - Windows isn't supported because of the lack of [Flutter PlatformView support](https://github.com/flutter/flutter/issues/31713).  
 
 ## Notice
-Need me to respond, tag me [Rex Isaac Raphael](https://github.com/juicycleff). 
+Original package author and maintainer: [Rex Isaac Raphael](https://github.com/juicycleff).
+
+For plugin-specific support and upstream issues, open an issue in the original repository and tag the maintainer.
 
 This plugin expects you to atleast know how to use Unity Engine. If you have issues with how unity widget is presented, you can please modify your unity project build settings as you seem fit.
 
