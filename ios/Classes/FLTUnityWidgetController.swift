@@ -94,7 +94,7 @@ public class FLTUnityWidgetController: NSObject, FLTUnityOptionsSink, FlutterPla
     func attachView() {
         startUnityIfNeeded()
 
-        let unityView = GetUnityPlayerUtils().ufw?.appController()?.rootView
+        let unityView = GetUnityPlayerUtils().ufw?.appController()?.rootViewController?.view
         if let superview = unityView?.superview {
             unityView?.removeFromSuperview()
             superview.layoutIfNeeded()
@@ -109,7 +109,7 @@ public class FLTUnityWidgetController: NSObject, FLTUnityOptionsSink, FlutterPla
     }
 
     func reattachView() {
-        let unityView = GetUnityPlayerUtils().ufw?.appController()?.rootView
+        let unityView = GetUnityPlayerUtils().ufw?.appController()?.rootViewController?.view
         let superview = unityView?.superview
         if superview != _rootView {
             attachView()
@@ -123,7 +123,7 @@ public class FLTUnityWidgetController: NSObject, FLTUnityOptionsSink, FlutterPla
             return
         }
 
-        let unityView = GetUnityPlayerUtils().ufw?.appController()?.rootView
+        let unityView = GetUnityPlayerUtils().ufw?.appController()?.rootViewController?.view
         if _rootView == unityView?.superview {
             if globalControllers.isEmpty {
                 unityView?.removeFromSuperview()
